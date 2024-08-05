@@ -1,0 +1,28 @@
+<div class="user-list" *ngIf="userRole === 'ADMIN'">
+  <h2>All Users</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.surname }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button (click)="onEdit(user._id)" class="icon-button">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button (click)="onDelete(user._id)" class="icon-button">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

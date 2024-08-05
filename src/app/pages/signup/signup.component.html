@@ -1,0 +1,62 @@
+<app-signup-layout
+  title="Sign up to our system!"
+  primaryBtnText="Sign up"
+  secondaryBtnText="Back and Sign in"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!signupForm.valid"
+>
+  <form [formGroup]="signupForm">
+    <app-input
+      formControlName="first_name"
+      inputName="firstNname"
+      type="text"
+      label="First Name"
+      placeholder="First Name"
+    >
+      <img src="/assets/svg/signup-input/username-signup.svg" />
+    </app-input>
+    <app-input
+      formControlName="last_name"
+      inputName="lastName"
+      type="text"
+      label="Last Name"
+      placeholder="Last Name"
+    >
+    <img src="/assets/svg/signup-input/username-signup.svg" />
+    </app-input>
+    <app-input
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="Email"
+      errorMessage="Email already exists!"
+    >
+      <img src="/assets/svg/signup-input/mail.svg" />
+    </app-input>
+    <app-input
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Password"
+      placeholder="Password"
+    >
+      <img src="/assets/svg/signup-input/mail.svg" />
+    </app-input>
+    <app-input>
+     <div class="role-select">
+      <label for="role">Role: </label>
+      <select formControlName="role" id="role">
+        <option value="669f6e3e4267d941da2163a0">ADMIN</option>
+        <option value="669f6e454267d941da2163a2">USER</option>
+
+      </select>
+    </div> 
+    <img src="/assets/svg/signup-input/role.svg" />
+  </app-input>
+
+    <span></span>
+  </form>
+  <app-success-modal [registeredEmail]="registeredEmail" [isOpen]="isModalOpen" (onCloseModal)="closeModal()"></app-success-modal>
+</app-signup-layout>

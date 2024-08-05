@@ -1,0 +1,149 @@
+@import 'src/styles/variables';
+
+
+// ** SIDEBAR ** //
+.sidebar {
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 185px;
+    min-width: 185px;
+    justify-content: center;
+    padding: 0.8em;
+    height: 100%;
+    font-family: $font-primary;
+    transition: width 1s, min-width 0.9s;
+  }
+
+  .control-sidebar {
+    width: 100%;
+  }
+
+  .icon-close-open {
+    position: absolute; 
+    left: 165px; 
+    transition: left 1s; 
+  }
+  
+  .sidebar-closed .icon-close-open {
+    left: calc(20px);
+    transform: rotate(180deg);
+  }
+  
+  .sidebar-closed {
+    width: 70px;
+    min-width: 70px;
+  }
+  
+  .sidebar-closed .search-input::placeholder {
+    color: transparent; 
+  }
+
+ .sidebar-closed .sidebar-link a {
+  color: transparent;
+ }
+
+
+ .sidebar-closed .sidebar-link a:hover {
+  width:auto;
+  left:0px;
+  span {
+    left:20px;
+    padding:0.2em;
+    height:auto;
+    position: relative;
+    background-color: white;
+    color: #A5A5A5;
+  }
+ }
+
+// MENU LINK //
+
+.sidebar-link a {
+  display: flex;
+  align-items: center;
+  padding-left:0.5em;
+  color: #A5A5A5;
+  font-weight: 500;
+  font-size:1em;
+  text-decoration:none;
+  img {
+      padding-right: 0.3em;
+
+  }
+}
+
+
+.sidebar a:hover {
+  background-color: #f5f5f5;
+}
+
+// SEARCH //
+
+  .search-container {
+    margin-top:5em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #F4F4F4;
+    border-radius: 5px;
+    margin-bottom:2em;
+  }
+  
+  .search-icon {
+    margin-left: 12px;
+  }
+  
+  .search-input {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0.5em;
+    font-family: $font-primary;
+    font-size: 0.9em;
+    outline: none;
+  }
+
+  /* Mídia para tornar responsivo */
+
+@media  (max-width: 1055px) {
+  .sidebar {
+    width: 70px;
+    min-width:70px;
+  }
+  .icon-close-open {
+    display: none;
+  }
+
+  .sidebar-link a:hover {
+    width:auto;
+    left:0px;
+    span {
+      display: inline;
+      left:20px;
+      padding:0.2em;
+      height:auto;
+      position: relative;
+      background-color: white;
+      color: #A5A5A5;
+    }
+   }
+
+   .sidebar-link a {
+    display: flex;
+    align-items: center;
+    padding-left:0.5em;
+    span {
+      display: none;
+    }
+    img {
+        padding-right: 0.3em;
+  
+    }
+  }
+
+  .search-input::placeholder {
+    color: transparent; 
+  }
+
+}

@@ -1,0 +1,16 @@
+<div class="input-wrapper">
+    <label [for]="inputName">{{ label }}</label>
+    <div class="input-content">
+        <div class="icon">
+            <ng-content></ng-content>
+        </div>
+        <input
+            [type]="type" 
+            [placeholder]="placeholder"
+            [value]="value"
+            (input)="onInput($event)"
+            [ngClass]="{'has-error': hasError}">
+       
+    </div>
+    <div class="error-message" *ngIf="hasError">{{ errorMessage }}</div>
+</div>

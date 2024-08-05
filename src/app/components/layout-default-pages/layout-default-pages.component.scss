@@ -1,0 +1,24 @@
+@import 'src/styles/variables';
+
+main {
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-container {
+    background-color: #F5F5F5;
+    display: flex;
+    flex: 1;
+    height: 100vh;
+}
+
+.content {
+    background-color: transparent;
+    width: 100%;
+    padding-left:3em;
+    justify-content: center;
+    padding-top: 1em;
+    overflow: auto;
+}

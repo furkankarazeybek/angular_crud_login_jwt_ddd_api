@@ -1,0 +1,14 @@
+.container-notifications {
+    .boxAlertClass {
+        padding: 1em;
+        border-radius: 5px;
+        margin-top: 1em;
+        overflow: auto;
+    s
+
+        &.alert-red {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    }
+}

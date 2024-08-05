@@ -1,0 +1,65 @@
+<nav class="navbar">
+  <div class="div-control-logo">
+    <div class="logo-text">
+      <span></span>
+      <span style="font-weight: 600"></span>
+    </div>
+  </div>
+
+  <div class="div-control-box-infos">
+    <div class="box-infos">
+  
+
+
+      <img
+        style="cursor: pointer"
+        src="/assets/svg/navbar/settings.svg"
+        (click)="toggleSettingsMenu()"
+      />
+      <div
+        class="settings-submenu"
+        *ngIf="isSubMenuOpen"
+        (mouseleave)="toggleSettingsMenu()"
+      >
+    
+
+        <div class="div-control-status-role">
+          <div
+            class="color-status"
+            [ngClass]="{
+              available: userStatus === 'AVAILABLE',
+              unavailable: userStatus === 'UNAVAILABLE'
+            }"
+            style="width: 12px; height: 11px"
+          ></div>
+          <div class="user-status">
+            <span>{{ userStatus }}</span>
+          </div>
+          <div class="user-role">
+            <span>{{ userRole }}</span>
+          </div>
+        </div>
+
+        <a href="/user">
+          <img src="/assets/svg/submenu-navbar/profile.svg" /> My profile
+        </a>
+
+ 
+
+        <button class="close-btn" (click)="toggleSettingsMenu()">X</button>
+      </div>
+
+      <div class="user-name">
+        <span>{{ userInitials }}</span>
+      </div>
+    </div>
+
+    <div class="icon-logout">
+      <img
+        style="cursor: pointer"
+        src="/assets/svg/navbar/logout.svg"
+        (click)="logout()"
+      />
+    </div>
+  </div>
+</nav>

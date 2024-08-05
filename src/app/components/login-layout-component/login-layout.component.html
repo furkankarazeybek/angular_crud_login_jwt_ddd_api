@@ -1,0 +1,41 @@
+<main>
+    <section class="background">
+        <div class="backopacity"></div>
+        <img src="/assets/svg/background.png" class="background-image">
+    </section>
+    
+    <div class="form-section">
+
+        <div class="form-column-primary">
+    
+            <h2>{{ title }}</h2>
+            <div class="content-form">
+            <ng-content></ng-content>
+
+            <div class="btn-wrapper">
+                <div class="forgot-password">
+                    <!-- <div></div>
+                    <span style="cursor:pointer;" (click)="openRecoveryPassword()">Forgot password?</span>
+                    <div></div> -->
+                </div>
+                <button 
+                    class="btn-primary" 
+                    (click)="submit()"
+                    [disabled]="disablePrimaryBtn"
+                >
+                    {{ primaryBtnText }}
+                </button>
+
+                <button class="btn-secondary" (click)="navigate()">{{ secondaryBtnText }}</button>
+                
+            </div>
+        </div>
+    </div>
+        
+      
+    </div>
+
+
+
+    
+</main>

@@ -1,0 +1,45 @@
+.user-list {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      th {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    }
+  
+    .icon-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #007bff;
+      transition: color 0.3s ease, transform 0.3s ease;
+      margin-right: 10px;
+      
+      &:hover {
+        color: #0056b3;
+        transform: scale(1.1);
+      }
+      
+      &:last-of-type {
+        margin-right: 0;
+      }
+      
+      i {
+        margin: 0;
+      }
+    }
+  }
+  

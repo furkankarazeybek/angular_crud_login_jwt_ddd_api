@@ -1,0 +1,49 @@
+<div class="custom-modal">
+  <div class="modal-content">
+    <div class="header-modal" [style.background-color]="headerBackgroundColor">
+      <div class="title-modal" [style.color]="headerTextColor">
+        {{ titleModal }}
+      </div>
+      <span class="close" (click)="closeModal()" [style.color]="closeTextColor"
+        >&times;</span
+      >
+    </div>
+    <div class="section-content">
+      <div class="message-success">
+        <div class="icon-success">
+          <img src="{{ srcIcon }}" />
+        </div>
+        <div class="primary-message">
+          {{ primaryMessageText }}
+        </div>
+      </div>
+      <div class="secondary-message">
+        {{ secondaryMessageText }}
+      </div>
+
+      <ng-content></ng-content>
+      <br />
+      <div class="div-btn">
+        <button
+          class="btn-primary"
+          (click)="closeModal()"
+          [style.background-color]="backgroundPrimaryBtn"
+          [style.color]="colorTextPrimaryBtn"
+          [style.border]="borderColorPrimaryBtn"
+        >
+          {{ primaryBtnText }}
+        </button>
+
+        <button
+          *ngIf="secondaryBtnText"
+          class="btn-secondary"
+          (click)="submit()"
+          [style.background-color]="backgroundSecondaryBtn"
+          [style.color]="colorTextSecondaryBtn"
+        >
+          {{ secondaryBtnText }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

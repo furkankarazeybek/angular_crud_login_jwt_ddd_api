@@ -1,0 +1,28 @@
+<div [class.sidebar-closed]="!isSidebarOpen" class="sidebar">
+
+    <div class="control-sidebar">
+      <img (click)="toggleSidebar()" class="icon-close-open" style="cursor: pointer" src="/assets/svg/menu-sidebar/open-close-sidebar.svg" />
+    </div>
+      
+      <div class="search-container">
+        <img
+          src="/assets/svg/menu-sidebar/search.svg"
+          alt="Search Icon"
+          class="search-icon"
+        />
+        <input type="text" placeholder="search" class="search-input" />
+      </div>
+      
+      <div class="sidebar-link">
+        <a href="/home"
+              ><img src="/assets/svg/menu-sidebar/home.svg" /> <span>Dashboard</span>
+         </a>
+
+         <br />
+         <a href="/users"
+         ><img src="/assets/svg/menu-sidebar/home.svg" /> <span>Users</span>
+         </a>
+        
+    </div>
+
+  </div>

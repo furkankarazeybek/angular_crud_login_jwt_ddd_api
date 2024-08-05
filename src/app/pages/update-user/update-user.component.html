@@ -1,0 +1,22 @@
+<div>
+    <h2>Update User</h2>
+    <form (ngSubmit)="updateUser()">
+      <label>
+        Name:
+        <input [(ngModel)]="user.name" name="name" required>
+      </label>
+  
+      <label>
+        Surname:
+        <input [(ngModel)]="user.surname" name="surname" required>
+      </label>
+  
+      <label>
+        Email:
+        <input [(ngModel)]="user.email" name="email" required>
+      </label>
+  
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  

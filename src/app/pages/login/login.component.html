@@ -1,0 +1,33 @@
+<app-login-layout
+    title="LOGIN PAGE"
+    primaryBtnText="Login Now"
+    secondaryBtnText="Signup Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!loginForm.valid"
+>
+<div class="container-notifications">
+<div class="boxAlertClass" [ngClass]="boxAlertClass"><span>{{ messageAlert }}</span></div></div>
+    <form [formGroup]="loginForm">
+        <app-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="Email"
+        >
+            <img src="/assets/svg/username.svg"/>
+        </app-input>
+        <app-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Password"
+            placeholder="Password"
+        >
+        <img src="/assets/svg/password-user.svg"/>
+    </app-input>
+    <span></span>
+    </form>
+   
+</app-login-layout>

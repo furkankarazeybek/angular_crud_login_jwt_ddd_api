@@ -1,0 +1,308 @@
+@import 'src/styles/variables';
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.form-section {
+    font-family: $font-primary;
+    height:70%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+    padding-left: 10px;
+    display: flex;
+    width:50%;
+    justify-content: space-between; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    .form-column-primary, .form-column-secondary {
+        padding: 20px;
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-column-primary {
+        background-color: white; 
+        //border:4px solid #A2A53B;
+    }
+
+    .content-form {
+        align-items: normal;
+        width:100%; 
+    }
+
+    .form-column-secondary {
+        background-color:$gray-bg; 
+        span {
+            width: 100%;
+            height: 100%;
+            color:#545454;
+            text-align: center;
+            align-items: end;
+            justify-content: center;
+            display:flex;
+            font-size: 13px;
+            opacity:0.5;
+        }
+        img {
+            width:440px;
+        }
+    }
+
+
+    img {
+        width:  250px;
+        padding-top:35px;
+        height:auto;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 17px;
+        font-weight: bold;
+        font-family: $font-primary;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .btn-wrapper {
+        display: flex;
+        font-family: $font-primary;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+
+        .forgot-password {
+            margin-top:20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            font-size: 14px;
+            color: $text-color;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            span:hover {
+                color:#A2A53B;
+                font-weight: 600;
+            }
+
+            div {
+                flex-grow: 1;
+                height: 2px;
+                background-color: $gray-bg;
+            }
+        }
+
+
+        button {
+            margin-top:20px;
+            font-family: $font-primary;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            background: transparent;
+            padding: 12px 24px;
+            cursor: pointer;
+
+            &:disabled {
+                opacity: 0.8;
+            }
+
+            &.btn-primary {
+                background-color: $primary-color;
+                color: white;
+                box-shadow: 0px 8px 12px rgba(148, 230, 64, 0.2);
+            }
+
+            &.btn-secondary {
+                border: 1px solid $primary-color;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.backopacity {
+    background-color: rgba(0, 0, 0, 0.343);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border-bottom:4px solid #A2A53B;
+    padding: 10px;
+
+    span {
+        font-family: $font-primary;
+        font-size: $text-size-primary;
+        color: #EFEFEF;
+    }
+}
+
+/* Mídia para tornar responsivo */
+
+@media  (max-width: 1055px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+    }
+
+    .form-section {
+        padding-left: 0px !important;
+        top:150px !important;
+        position: relative;
+        height: auto;
+        background-color: white; 
+        display: flex;
+        flex-direction: column;
+        width:80% !important;
+    }
+
+    .form-column-primary, .form-column-secondary {
+        width:100% !important;
+    }
+
+    .form-column-primary {
+        background-color: white; 
+        //border:4px solid #A2A53B;
+    }
+
+    .content-form {
+        align-items: normal;
+    }
+
+    .form-column-secondary {
+        background-color:$gray-bg; 
+        span {
+            width: 100%;
+            height: 100%;
+            color:#545454;
+            text-align: center;
+            align-items: end;
+            justify-content: center;
+            display:flex;
+            font-size: 13px;
+            opacity:0.5;
+        }
+        img {
+            width:440px;
+        }
+    }
+
+
+    .footer {
+        position: fixed;
+        background-color: #fff;
+        border-bottom:4px solid #A2A53B;
+        padding: 10px;
+        span {
+            font-family: $font-primary;
+            font-size: $text-size-primary;
+            color: #3d3d3d;
+        }
+    }
+
+
+}
+
+/* Mídia para tornar responsivo */
+
+@media  (min-width: 1056px) and (max-width: 1400px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+    }
+
+    .form-section {
+        padding-left: 0px !important;
+        position: relative;
+        height: auto;
+        background-color: white; 
+        display: flex;
+        //flex-direction: column;
+        width:70% !important;
+    }
+
+    .form-column-primary, .form-column-secondary {
+        width:100% !important;
+    }
+
+    .form-column-primary {
+        background-color: white; 
+        //border:4px solid #A2A53B;
+    }
+
+    .content-form {
+        align-items: normal;
+    }
+
+    .form-column-secondary {
+        background-color:$gray-bg; 
+        span {
+            width: 100%;
+            height: 100%;
+            color:#545454;
+            text-align: center;
+            align-items: end;
+            justify-content: center;
+            display:flex;
+            font-size: 13px;
+            opacity:0.5;
+        }
+        img {
+            width:440px;
+        }
+    }
+
+
+    .footer {
+        position: fixed;
+        background-color: transparent;
+        border-bottom:4px solid #A2A53B;
+        padding: 10px;
+    }
+}

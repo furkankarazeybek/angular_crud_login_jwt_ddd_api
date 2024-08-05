@@ -1,0 +1,69 @@
+<div class="header-profile">
+  <div class="div-control-profile">
+    <div class="photo-section">
+      <div
+        [ngClass]="{
+          available: userStatus === 'AVAILABLE',
+          unavailable: userStatus === 'UNAVAILABLE'
+        }"
+        class="profile-user"
+      >
+        <span>{{ userInitials }}</span>
+      </div>
+
+      <div class="status-user">
+        {{ userStatus }}
+      </div>
+    </div>
+
+    <div class="infos-section">
+      <div class="infos-basics">
+        <div class="name">
+          <span>Name user</span>
+          <span class="info-value">
+            {{userFullName}}</span
+          >
+        </div>
+
+        <div class="identity">
+          <span>Identity (ID)</span>
+          <span class="info-value">{{ userIdentity }}</span>
+        </div>
+
+        <div class="email">
+          <span>Email</span>
+          <span class="info-value">{{ userEmail }}</span>
+        </div>
+      </div>
+
+      <div class="btns-section">
+        <button
+          class="btn-primary"
+          (click)="submit()"
+          [disabled]="disablePrimaryBtn"
+          *ngIf="userRole === 'ADMIN'"
+        >
+          <img src="/assets/svg/header-profile/alert.svg" /> Create Alert
+        </button>
+
+        <button
+          class="btn-primary"
+          (click)="submit()"
+          [disabled]="disablePrimaryBtn"
+          *ngIf="userRole === 'ADMIN'"
+        >
+          <img src="/assets/svg/header-profile/add.svg" /> Register User
+        </button>
+
+        <button
+          class="btn-primary"
+          (click)="submit()"
+          [disabled]="disablePrimaryBtn"
+          *ngIf="userRole === 'ADMIN'"
+        >
+          <img src="/assets/svg/header-profile/view.svg" /> View Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

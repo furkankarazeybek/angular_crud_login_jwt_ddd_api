@@ -1,0 +1,14 @@
+<div class="box-notifications">
+  <div class="notifications">
+    <div class="title-notifications">
+      <span>Notifications</span>
+    </div>
+
+    <div class="container-notifications">
+      <div class="notification-alert" [ngClass]="notificationClass">
+        <img *ngIf="userSubStatus !== 'NON_COMPLIANCE' && userSubStatus !== 'ON_ALERT'" />
+        <span>{{ notificationMessage }}</span>
+      </div>
+    </div>
+  </div>
+</div>

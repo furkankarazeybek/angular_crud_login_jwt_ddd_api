@@ -1,0 +1,16 @@
+<app-modal-default
+  [headerBackgroundColor]="'#BCE4A9'"
+  [headerTextColor]="'#5BAF33'"
+  [closeTextColor]="'#5BAF33'"
+  titleModal="User Registration Successfully!"
+  srcIcon="/assets/svg/utils/success.svg"
+  primaryMessageText=" The user with email {{ registeredEmail }} was
+  registered in our system."
+  secondaryMessageText=""
+  [borderColorPrimaryBtn]="'1px solid #5BAF33'"
+  [colorTextPrimaryBtn]="'#5BAF33'"
+  primaryBtnText="cancel"
+  secondaryBtnText=""
+  (closeModal)="closeModal()"
+  *ngIf="isOpen"
+></app-modal-default>

@@ -1,0 +1,35 @@
+.header-profile {
+    background-color: #f9f9f9; /* Açık gri arka plan */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    max-width: 600px; /* Maksimum genişlik */
+    margin: auto; /* Ortalamak için */
+  }
+  
+  .profile-info {
+    text-align: center; /* Metni ortalamak için */
+  }
+  
+  .profile-info h2 {
+    color: #333; /* Başlık rengi */
+    margin-bottom: 20px; /* Başlık ve detaylar arasına boşluk */
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Sol tarafta hizalamak */
+    gap: 10px; /* Her detay arasında boşluk */
+  }
+  
+  .profile-details p {
+    font-size: 16px; /* Yazı boyutu */
+    color: #555; /* Metin rengi */
+    margin: 0; /* Margini sıfırla */
+  }
+  
+  .profile-details strong {
+    color: #000; /* Kalın metin rengi */
+  }
+  
